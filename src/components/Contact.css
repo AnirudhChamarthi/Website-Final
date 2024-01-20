@@ -1,0 +1,29 @@
+.container {
+   justify-content: right;
+   display:block;
+   background-color: black;
+   color: white;
+   margin:auto;
+   display:block;
+   
+}
+
+input, label, textarea {
+    display:block;
+    border-radius: 5%;
+    width:fit-content;
+}
+.textbox {
+    width: 300px;
+}
+.input-help {
+    overflow-y: scroll;
+    size: 800px;
+}
+
+.submit-button {
+    color: white;
+    background-color: blue;
+    border-radius: 30%;
+    ;
+}
