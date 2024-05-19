@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import HeroComponent from './HeroComponent';
+// import HeroComponent from './HeroComponent';
 import "./Card.css";
 import { Link } from 'react-router-dom';
 

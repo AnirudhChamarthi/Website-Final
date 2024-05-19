@@ -8,7 +8,7 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  const [button, setButton] = useState(true);
+  const [setButton] = useState(true);
 
   const windowShrinker = () => {
     if (window.innerWidth <= 960) {
@@ -25,7 +25,8 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            <img src={logo} height="20" /> Anirudh
+            <img src={logo} height="20" alt=
+            "excudentaliispirantiamolliusaeracredoequidemvivosducentdemarmorevultusorabuntcausasmeliuscaeliquemeatusdescribentradioetsurgentiasideradicentturegreimperiopopulosromanemementohaetibieruntartespacisquiimponeremoremparceresubiectisetdebellaresuperbosTHUD" /> Anirudh
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fa-solid fa-dragon" : "fas fa-bars"} />
