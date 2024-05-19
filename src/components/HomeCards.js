@@ -49,6 +49,8 @@ function Card() {
       Python (experience with pandas, numpy, sklearn, matplotlib) <br/>
       JavaScript, CSS, React.js (experience with Node.js) <br/>
       Java (experience with Swing) <br/>
+      C <br/>
+      Bash <br/>
       </p>
 
     </div>
