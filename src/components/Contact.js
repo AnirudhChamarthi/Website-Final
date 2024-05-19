@@ -4,33 +4,37 @@ import "./Contact.css";
 import FormData from 'form-data';
 function Contact() {
 
-function handleSubmit(event) {
+ 
+
+  function handleSubmit(event) {
     event.preventDefault();
     const form = event.target;
     const formInfo = new FormData(form);
-    const jsonBody = Object.fromEntries(formInfo);
-    console.log (jsonBody)
+    const jsonBody = Object.fromEntries(formInfo.entries());  // Ensure correct conversion
+    console.log(jsonBody);
+
     async function fetchData() {
-      await fetch('http://localhost:3002/send', {
-      method: "POST",
-      body: JSON.stringify (jsonBody),
-      headers: {
-        "Content-Type": "application/json"
+      try {
+        const response = await fetch('http://localhost:3002/send', {
+          method: "POST",
+          body: JSON.stringify(jsonBody),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+        const result = await response.json();
+        if (result.status === "success") {
+          alert("Message sent!");
+        } else {
+          alert("Message failed to send.");
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert("Message failed to send due to an error.");
       }
     }
-    ).then(
-      (response) => (response.json())
-        ).then((response)=> {
-          if (response.status === "success") {
-            alert ("Message sent!")
-          }
-          else if(response.status === 'fail') {
-        alert("Message failed to send.")
-      }
-    })
-  }
-fetchData ();
 
+    fetchData();
   }
 
   return (
