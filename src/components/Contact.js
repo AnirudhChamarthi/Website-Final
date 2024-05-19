@@ -15,7 +15,12 @@ function Contact() {
 
     async function fetchData() {
       try {
-        const response = await fetch('http://localhost:3002/send', {
+        // Determine the base URL dynamically based on environment
+        const baseURL = process.env.NODE_ENV === 'production'
+          ? window.location.origin
+          : 'http://localhost:3002';
+  
+        const response = await fetch(`${baseURL}/send`, {
           method: "POST",
           body: JSON.stringify(jsonBody),
           headers: {
