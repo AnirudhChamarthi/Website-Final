@@ -4,6 +4,10 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 const creds = require('./config');
 
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
+  });
+
 const transporter = nodemailer.createTransport({
   host: "smtp.mailtrap.io",  // Use the correct Mailtrap SMTP server
   port: 2525,
