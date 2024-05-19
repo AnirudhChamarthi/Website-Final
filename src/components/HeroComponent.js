@@ -1,4 +1,4 @@
-/* import React from "react";
+import React from "react";
 import "../App.css";
 import logo2 from "./anirudh-eagle.png";
 import "./HeroComponent.css";
@@ -11,4 +11,4 @@ function HeroComponent () {
     )
 }
 
-export default HeroComponent; */
+export default HeroComponent;  

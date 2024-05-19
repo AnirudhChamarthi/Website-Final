@@ -25,8 +25,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            <img src={logo} height="20" alt=
-            "excudentaliispirantiamolliusaeracredoequidemvivosducentdemarmorevultusorabuntcausasmeliuscaeliquemeatusdescribentradioetsurgentiasideradicentturegreimperiopopulosromanemementohaetibieruntartespacisquiimponeremoremparceresubiectisetdebellaresuperbosTHUD" /> Anirudh
+            <img src={logo} height="20" /> Anirudh
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fa-solid fa-dragon" : "fas fa-bars"} />
