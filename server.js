@@ -9,6 +9,7 @@ const creds = require('./config');
 const transporter = nodemailer.createTransport({
   host: "smtp.mailtrap.io",  // Use the correct Mailtrap SMTP server
   port: 2525,
+  requireTLS: true,
   auth: {
     user: creds.USER,
     pass: creds.PASS
