@@ -25,7 +25,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            <img src={logo} height="20" /> Anirudh
+            <img src={logo} height="20" /> Anirudh Chamarthi
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fa-solid fa-dragon" : "fas fa-bars"} />

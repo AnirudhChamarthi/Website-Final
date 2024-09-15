@@ -6,8 +6,10 @@ function Home() {
   return (
     <>
     <div> 
-      <HeroComponent />
-      <Card/>
+    <HeroComponent/>
+      <Card>
+      </Card>
+
       </div>
     </>
   );

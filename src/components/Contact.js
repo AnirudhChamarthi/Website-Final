@@ -42,19 +42,38 @@ function Contact() {
 
   return (
     <>
-      <div className="container">
+      <div className="contact-container">
+        <label style={{ fontSize: '36px', color: 'blue' }}>
+        Contact Me
+        </label>
+    <div className="inner-container">
         <style>{'body { background-color: black; }'}</style>
         <form method="post" onSubmit={handleSubmit}>
-          <label>Name: <input type="text" className = "textbox" name="name"></input></label>
-          <label>Email:  <input type="email" className = "textbox" name="email"></input></label>
-          <div className="input-help">
-            <label> Message:
-              <textarea type="text" className = "textbox" name="message" placeholder="Thank you for messaging!" columns="200" rows="10" />
+            <label>
+                Name:
+                <input type="text" className="textbox" name="name" />
             </label>
-          </div>
-          <button className = "submit-button" type="submit">Submit</button>
+            <label>
+                Email:
+                <input type="email" className="textbox" name="email" />
+            </label>
+            <div className="input-help">
+                <label>
+                    Message:
+                    <textarea
+                        className="textbox"
+                        name="message"
+                        placeholder="Thank you for messaging!"
+                        cols="50"
+                        rows="10"
+                    />
+                </label>
+            </div>
+            <button className="submit-button" type="submit">Submit</button>
         </form>
-      </div>
+    </div>
+</div>
+
 
 
     </>

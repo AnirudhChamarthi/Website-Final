@@ -1,64 +1,59 @@
+/* styles.css */
+
 .card-front, .card-back {
-    /* Add shadows to create the "card" effect */
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    perspective: 1000px;
-  }
-  .card-back {
-    transform: rotateY(180deg);
-  }
-
-  .flip-card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 40%;
-    display: inline-block;
-    vertical-align: middle;
-    white-space: pre-line;
-    margin-top: 3%;
-    margin-bottom:3%;
-    margin-inline: 5%;
-    background-color: white;
-    border-radius: 20px;
-    height: 200px;
-    perspective: 1000px;
-  }
-
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-
- .flip-card:hover .flip-card-inner{
-    transform: rotateY(180deg);
-  }
-
-
-  .card-row {
-    margin-left:auto;
-    margin-right:auto;
-    display: flex;
-  }
-  
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-
-.filler-space {
-  width: 10%;
+  position: absolute; /* Ensure elements are positioned on top of each other */
+  width: 100%; /* Full width of the flip card */
+  height: 100%; /* Full height of the flip card */
+  backface-visibility: hidden; /* Hide the back face when flipped */
+  -webkit-backface-visibility: hidden; /* For older browsers */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  transform: rotateX(0);
 }
 
-  .sports-card{
-    background-color: black;
-    -webkit-text-fill-color: white;
-    width: 25%;
-    border: solid;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    margin-left: 3%;
-    margin-right: 3%;
-  }
+.card-front {
+  background-color: white; /* Front side background color */
+  z-index: 2; /* Ensure front side is above the back side */
+}
+
+.card-back {
+  color: black; /* White text on the back */
+  transform: rotateY(180deg); /* Rotate the back side */
+}
+
+.flip-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 3% 5%;
+  background-color: white;
+  border-radius: 20px;
+  height: 200px;
+  perspective: 1000px; /* For 3D effect */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d; /* Preserve 3D transformations */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /* Flip on hover */
+}
+
+.card-row {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of cards */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}

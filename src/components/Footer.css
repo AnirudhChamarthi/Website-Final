@@ -1,0 +1,32 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .footer {
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom:0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 0 20px;
+    flex:1;
+  }
+  
+  a {
+    color: #f1c40f;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
